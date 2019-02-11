@@ -1,0 +1,28 @@
+{extends file="general_page_template.tpl"}
+{block name=title}
+    {$basename|escape}
+{/block}
+
+
+{block name=body}
+<div class="general-page container">
+    
+    <ul id="slides" class="m-span6">
+        {foreach $image_src as $src_path}
+            {if $src_path@first}
+                <li class="slide showing"><img class="image" src="{$src_path}" alt="Images"></li> 
+                {else}
+                <li class="slide"><img class="image" src="{$src_path}" alt="Images"></li>
+                {/if}
+            {/foreach}
+    </ul>
+    
+        <div class="m-span6 info">
+            <h1>The New Pepster's Place</h1>
+
+            <p>Pepster's Place Website is undergoing a major overhaul, but when the site comes back it will be better than ever. The website will deal with photography, videography and other digital media, plus it will have a custom forum. The forum will have discussions on photography, videography and Apple Computers with the iMac Pro being the computer central target of discussion. </p>
+
+        </div>
+
+    </div>
+{/block}
